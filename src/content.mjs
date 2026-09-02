@@ -343,18 +343,18 @@ export const parceiros = {
 export const sobre = {
   resumo: '28 anos de experiência em implantação e suporte de projetos de automação industrial, atuando do levantamento de requisitos ao start-up e à sustentação da operação, em plantas de siderurgia, metalurgia, fundição e materiais de construção. Técnico em Eletrotécnica com registro ativo no CFT/CRT, com atribuição para responsabilidade técnica e emissão de TRT.',
   ficha: [
-    { k: 'Responsável', v: 'Paulo José da Silva Souza' },
-    { k: 'Registro', v: 'CFT/CRT 270698738-32 — ativo' },
+    { k: 'Experiência', v: '28 anos em automação industrial' },
+    { k: 'Registro', v: 'CFT/CRT 270698738-32 — ativo, com emissão de TRT' },
+    { k: 'Setores', v: 'Siderurgia, metalurgia, fundição e materiais de construção' },
     { k: 'Razão social', v: 'Paulo José da Silva Souza Automação de Processos Industriais Ltda' },
     { k: 'CNPJ', v: '63.652.491/0001-75' },
-    { k: 'Base', v: 'Alumínio/SP' },
-    { k: 'Atendimento', v: 'Mairinque, São Roque, Votorantim, Araçariguama, Iperó, Sorocaba, Itu e demais cidades da região' },
+    { k: 'Base', v: 'Alumínio/SP — atendimento em Sorocaba e região' },
   ],
   trajetoria: [
-    { quando: 'Desde 2025', org: 'AUPROIN', papel: 'Diretor executivo e responsável técnico — projetos próprios de automação, retrofit e comissionamento.' },
-    { quando: 'Metalurgia e fundição', org: 'Moxba Metalúrgica do Brasil', papel: 'Araçariguama/SP — projeto, montagem e start-up de plantas de processo.' },
-    { quando: 'Siderurgia', org: 'Gerdau Aços Longos', papel: 'Automação de linhas de laminação e movimentação de materiais.' },
-    { quando: 'Metalurgia do alumínio', org: 'CBA — Companhia Brasileira de Alumínio', papel: 'Alumínio/SP — automação, diagnóstico e confiabilidade de processo.' },
+    { quando: '2026 – atual', org: 'AUPROIN — Automação de Processos Industriais', papel: 'Responsável Técnico e Consultor Sênior em Automação Industrial · Alumínio/SP' },
+    { quando: '2022 – 2025', org: 'Moxba Metalúrgica do Brasil', papel: 'Especialista de Elétrica e Automação · Araçariguama/SP' },
+    { quando: '2006 – 2022', org: 'Gerdau Aços Longos', papel: 'Técnico de Automação de Processos de Laminação; Técnico de Manutenção Elétrica' },
+    { quando: '1998 – 2006', org: 'CBA — Companhia Brasileira de Alumínio', papel: 'Oficial de Manutenção · Alumínio/SP' },
   ],
   formacao: [
     'Engenharia de Controle e Automação — Faculdade Ampli, em andamento (conclusão prevista para 2028).',

@@ -345,8 +345,7 @@ const faqJsonLd = {
       <hr class="rule">
       <div class="faq">
         ${faq.map((f) => `<details class="bp">
-          ${corners}
-          <summary>${esc(f.p)}</summary>
+          <summary>${corners}<span>${esc(f.p)}</span></summary>
           <p>${esc(f.r)}</p>
         </details>`).join('\n        ')}
       </div>
@@ -918,7 +917,7 @@ ${servicos.map((s) => `- [${s.titulo}](${u(`servicos/${s.slug}/`)}): ${s.resumo}
 
 ## Casos de aplicação
 
-${casos.map((c) => `- [${c.titulo}](${u(`casos/${c.slug}/`)}): ${c.subtitulo} Resultado em números: ${c.numeros.map((n) => `${n.v} ${n.l}`).join('; ')}.`).join('\n')}
+${casos.map((c) => `- [${c.titulo}](${u(`casos/${c.slug}/`)}): ${c.subtitulo}. Resultado em números: ${c.numeros.map((n) => `${n.v} ${n.l}`).join('; ')}.`).join('\n')}
 
 ## Institucional
 

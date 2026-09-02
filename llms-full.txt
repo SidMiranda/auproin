@@ -218,18 +218,18 @@ Plataforma: IbaPDA e Iba Analyzer; servidores e clientes OPC; banco de dados e a
 
 28 anos de experiência em implantação e suporte de projetos de automação industrial, atuando do levantamento de requisitos ao start-up e à sustentação da operação, em plantas de siderurgia, metalurgia, fundição e materiais de construção. Técnico em Eletrotécnica com registro ativo no CFT/CRT, com atribuição para responsabilidade técnica e emissão de TRT.
 
-Responsável: Paulo José da Silva Souza
-Registro: CFT/CRT 270698738-32 — ativo
+Experiência: 28 anos em automação industrial
+Registro: CFT/CRT 270698738-32 — ativo, com emissão de TRT
+Setores: Siderurgia, metalurgia, fundição e materiais de construção
 Razão social: Paulo José da Silva Souza Automação de Processos Industriais Ltda
 CNPJ: 63.652.491/0001-75
-Base: Alumínio/SP
-Atendimento: Mairinque, São Roque, Votorantim, Araçariguama, Iperó, Sorocaba, Itu e demais cidades da região
+Base: Alumínio/SP — atendimento em Sorocaba e região
 
 Trajetória:
-- Desde 2025 — AUPROIN: Diretor executivo e responsável técnico — projetos próprios de automação, retrofit e comissionamento.
-- Metalurgia e fundição — Moxba Metalúrgica do Brasil: Araçariguama/SP — projeto, montagem e start-up de plantas de processo.
-- Siderurgia — Gerdau Aços Longos: Automação de linhas de laminação e movimentação de materiais.
-- Metalurgia do alumínio — CBA — Companhia Brasileira de Alumínio: Alumínio/SP — automação, diagnóstico e confiabilidade de processo.
+- 2026 – atual — AUPROIN — Automação de Processos Industriais: Responsável Técnico e Consultor Sênior em Automação Industrial · Alumínio/SP
+- 2022 – 2025 — Moxba Metalúrgica do Brasil: Especialista de Elétrica e Automação · Araçariguama/SP
+- 2006 – 2022 — Gerdau Aços Longos: Técnico de Automação de Processos de Laminação; Técnico de Manutenção Elétrica
+- 1998 – 2006 — CBA — Companhia Brasileira de Alumínio: Oficial de Manutenção · Alumínio/SP
 
 Formação e habilitações:
 - Engenharia de Controle e Automação — Faculdade Ampli, em andamento (conclusão prevista para 2028).
