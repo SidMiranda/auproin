@@ -1,0 +1,15 @@
+{
+  "name": "auproin-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional da AUPROIN — Automação de Processos Industriais. Estático, sem dependências.",
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "preview": "node src/preview.mjs",
+    "imagens": "node src/gerar-imagens.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

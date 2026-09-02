@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico — Ficha 01 | AUPROIN</title>
+<meta name="description" content="Retrofit de comando eletromecânico para CLP + IHM em máquina de blocos de concreto: 196 pontos de I/O mapeados, 98 alarmes classificados por ISA-18.2 e lógica sequencial documentada.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+<meta name="author" content="Paulo José da Silva Souza">
+<meta name="geo.region" content="BR-SP">
+<meta name="geo.placename" content="Alumínio, São Paulo">
+<meta name="theme-color" content="#b8000a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AUPROIN — Automação de Processos Industriais">
+<meta property="og:title" content="Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico — Ficha 01 | AUPROIN">
+<meta property="og:description" content="Retrofit de comando eletromecânico para CLP + IHM em máquina de blocos de concreto: 196 pontos de I/O mapeados, 98 alarmes classificados por ISA-18.2 e lógica sequencial documentada.">
+<meta property="og:image" content="../../assets/img/og-auproin.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logotipo AUPROIN sobre painel elétrico industrial">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico — Ficha 01 | AUPROIN">
+<meta name="twitter:description" content="Retrofit de comando eletromecânico para CLP + IHM em máquina de blocos de concreto: 196 pontos de I/O mapeados, 98 alarmes classificados por ISA-18.2 e lógica sequencial documentada.">
+<meta name="twitter:image" content="../../assets/img/og-auproin.jpg">
+<link rel="icon" href="../../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../../assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico","description":"Retrofit de comando eletromecânico para CLP + IHM em máquina de blocos de concreto: 196 pontos de I/O mapeados, 98 alarmes classificados por ISA-18.2 e lógica sequencial documentada.","author":{"@type":"Person","name":"Paulo José da Silva Souza"},"publisher":{"@type":"Organization","name":"AUPROIN — Automação de Processos Industriais"},"inLanguage":"pt-BR"}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<nav class="nav">
+  <a class="nav__brand" href="../../"><img src="../../assets/img/logo.png" alt="AUPROIN — Automação de Processos Industriais" width="264" height="44"></a>
+  <a href="../../">Início</a>
+      <a href="../../servicos/">Serviços</a>
+      <a href="../../casos/" aria-current="page">Casos</a>
+      <a href="../../sobre/">Sobre</a>
+      <a href="../../contato/">Contato</a>
+  <a class="btn btn-primary" href="https://wa.me/5515988016442?text=Ol%C3%A1%20Paulo%2C%20quero%20agendar%20um%20Diagn%C3%B3stico%20de%20Automa%C3%A7%C3%A3o%20na%20minha%20planta." target="_blank" rel="noopener">Diagnóstico de Automação</a>
+</nav>
+
+<main id="conteudo">
+
+  <section class="section">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="../../casos/">Casos</a> · Ficha 01 · Retrofit e modernização de máquina</p>
+      <hr class="rule rule--tight">
+      <h1 class="h-page" style="text-transform:none;max-width:24ch">Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico</h1>
+      <p class="lead">Retrofit de comando eletromecânico para arquitetura CLP + IHM em máquina de blocos de concreto</p>
+
+      <div class="stats" style="margin-top:48px">
+        <div><b>196</b><span>pontos de I/O mapeados e documentados</span></div>
+        <div><b>98</b><span>alarmes classificados por ISA-18.2</span></div>
+        <div><b>0 → 100%</b><span>da lógica sequencial documentada</span></div>
+        <div><b>3 normas</b><span>IEC 61082, 81346 e 61355 atendidas</span></div>
+      </div>
+
+      <div class="grid grid--2" style="margin-top:48px;align-items:start">
+        <div>
+          <span class="eyebrow">A situação</span>
+          <hr class="rule rule--tight">
+          <p style="margin:0;font-size:15px;line-height:1.65">A máquina operava com o comando original de fábrica: seletor rotativo passo a passo, contatores e relés. Não havia programa, diagrama atualizado nem qualquer diagnóstico — quando a máquina parava, a manutenção descobria a causa por tentativa e erro, medindo bornes. Componentes do comando já estavam fora de linha, e a lógica de operação existia apenas na cabeça de quem operava o equipamento há anos.</p>
+          <span class="eyebrow" style="margin-top:32px">O resultado</span>
+          <hr class="rule rule--tight">
+          <p style="margin:0;font-size:15px;line-height:1.65">A máquina saiu de zero diagnóstico para um sistema em que operador e mantenedor veem na tela exatamente qual condição impede a partida ou derrubou o ciclo. Acabou a dependência de componentes de comando obsoletos e do conhecimento não documentado, e a planta passou a ter programa comentado, lista de I/O e descritivo funcional em mãos — sem depender do fabricante original para qualquer alteração.</p>
+        </div>
+        <div>
+          <span class="eyebrow">O que foi feito</span>
+          <hr class="rule rule--tight">
+          <ul class="ticks"><li>Levantamento em campo e engenharia reversa da lógica: reconstrução documentada de toda a sequência de operação a partir do comando existente, transformada em descritivo funcional aprovado antes de programar.</li><li>Mapeamento de 196 pontos de I/O em duas camadas, com tabela de símbolos global e POUs de leitura e escrita de I/O com arquitetura de override — o programa fica legível e a manutenção consegue forçar um ponto sem quebrar a lógica.</li><li>Nova arquitetura CLP + IHM com CLP Delta série AS e interface de operação, substituindo integralmente o comando eletromecânico.</li><li>Base mestre de 98 alarmes classificados e priorizados segundo ISA-18.2 / IEC 62682, com telas de intertravamento e interface de alta performance segundo ISA-101.</li><li>Análise da distribuição 24 Vcc com estudo de seletividade e adequação documental conforme IEC 61082, 81346 e 61355 — a máquina passou a ter documentação elétrica coerente com a instalação real.</li></ul>
+        </div>
+      </div>
+
+      <figure class="bp" style="margin-top:56px;max-width:760px">
+        <img src="../../assets/img/painel-ihm-porta.jpg" alt="IHM Siemens montada na porta de painel de comando em aço inox" loading="lazy" width="1600" height="1200">
+        <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+      </figure>
+
+      <p class="small" style="margin-top:40px;padding-top:16px;border-top:1px solid var(--divider)">Plataforma: CLP Delta série AS (DIADesigner) e IHM · Linguagens: Ladder e SCL · Normas: ISA-18.2 / IEC 62682, ISA-101, NR-12, IEC 61082 / 81346 / 61355 · Também aplicável em: Siemens S7-1200 e S7-1500 (TIA Portal), com migração de IHM.</p>
+
+      <div class="btns">
+        <a class="btn btn-secondary" href="../../assets/pdf/AUPROIN_Ficha_01_Retrofit_CLP_IHM.pdf" download>Baixar ficha em PDF</a>
+        <a class="btn btn-secondary" href="../../servicos/retrofit-modernizacao/">Serviço: Retrofit e modernização</a>
+        <a class="btn btn-primary" href="https://wa.me/5515988016442?text=Ol%C3%A1%20Paulo%2C%20quero%20agendar%20um%20Diagn%C3%B3stico%20de%20Automa%C3%A7%C3%A3o%20na%20minha%20planta." target="_blank" rel="noopener">Agendar Diagnóstico</a>
+      </div>
+      <p class="prose" style="margin-top:16px">Tem máquina antiga rodando em relé, sem documentação e sem peça de reposição?</p>
+    </div>
+  </section>
+  
+  <section class="section section--dark">
+    <div class="wrap">
+      <span class="eyebrow">Por onde começar</span>
+      <hr class="rule">
+      <div class="grid grid--2">
+        <div>
+          <h2 class="h-page" style="max-width:16ch">Comece por um Diagnóstico de Automação</h2>
+          <p class="lead">Um dia na sua planta, relatório técnico em até cinco dias úteis, escopo e valor fechados antes do início. O relatório é seu, com ou sem contratação da execução.</p>
+          <div class="btns"><a class="btn btn-primary" href="https://wa.me/5515988016442?text=Ol%C3%A1%20Paulo%2C%20quero%20agendar%20um%20Diagn%C3%B3stico%20de%20Automa%C3%A7%C3%A3o%20na%20minha%20planta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a></div>
+        </div>
+        <div class="bp">
+          <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+          <div class="bp-head"><span>O relatório entrega</span><span>Folha 01 de 01</span></div>
+          <div class="rows">
+            <div><span class="k num">01</span><span>Situação real do programa de CLP e do supervisório: backup, documentação e riscos.</span></div>
+            <div><span class="k num">02</span><span>Levantamento de obsolescência de hardware e software.</span></div>
+            <div><span class="k num">03</span><span>Lista priorizada das causas de parada.</span></div>
+            <div><span class="k num">04</span><span>Plano de ação com estimativa de prazo e investimento por item.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <img src="../../assets/img/logo.png" alt="" width="240" height="40">
+      <div>AUPROIN — Automação de Processos Industriais</div>
+      <div>Paulo José da Silva Souza Automação de Processos Industriais Ltda</div>
+      <div>CNPJ 63.652.491/0001-75</div>
+    </div>
+    <div>
+      <h2>Responsável técnico</h2>
+      <div>Paulo José da Silva Souza</div>
+      <div>Registro CFT/CRT 270698738-32</div>
+      <div>Alumínio/SP</div>
+    </div>
+    <div>
+      <h2>Contato</h2>
+      <ul>
+        <li><a href="tel:+5515988016442">(15) 98801-6442</a></li>
+        <li><a href="mailto:paulo.souza@auproin.com.br">paulo.souza@auproin.com.br</a></li>
+        <li><a href="https://www.linkedin.com/in/paulo-souza-auproin-automacao" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Serviços</h2>
+      <ul>
+        <li><a href="../../servicos/clp-ihm-scada/">Programação de CLP, IHM e SCADA</a></li>
+        <li><a href="../../servicos/retrofit-modernizacao/">Retrofit e modernização</a></li>
+        <li><a href="../../servicos/projeto-eletrico-paineis/">Projeto elétrico e de painéis</a></li>
+        <li><a href="../../servicos/comissionamento-startup/">Comissionamento e start-up</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© 2026 AUPROIN. Todos os direitos reservados.</span>
+    <span>Atendimento em Alumínio, Mairinque, São Roque, Votorantim, Araçariguama, Iperó, Sorocaba, Itu e região.</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5515988016442?text=Ol%C3%A1%20Paulo%2C%20quero%20agendar%20um%20Diagn%C3%B3stico%20de%20Automa%C3%A7%C3%A3o%20na%20minha%20planta." target="_blank" rel="noopener" aria-label="Agendar Diagnóstico de Automação pelo WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+  <span>Diagnóstico de Automação</span>
+</a>
+</body>
+</html>

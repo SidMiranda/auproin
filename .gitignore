@@ -1,0 +1,17 @@
+# Segredos — NUNCA versionar. Este repositório é público (GitHub Pages).
+.env
+.env.*
+!.env.example
+
+# Material de origem: currículos, PDFs brutos, o canvas antigo e o zip.
+# Fica no disco, fora do site publicado.
+_arquivo/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

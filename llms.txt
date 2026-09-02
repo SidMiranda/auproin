@@ -1,0 +1,44 @@
+# AUPROIN — Automação de Processos Industriais
+
+> Engenharia de automação industrial em Alumínio/SP, atendendo Sorocaba e região.
+> Programação de CLP, IHM e SCADA; retrofit e modernização de máquina; projeto
+> elétrico e de painéis; comissionamento e start-up. Empresa de responsável técnico
+> único: Paulo José da Silva Souza, 28 anos de experiência, registro ativo no
+> CFT/CRT 270698738-32 com emissão de TRT. CNPJ 63.652.491/0001-75.
+
+Contato direto: WhatsApp e telefone (15) 98801-6442 · paulo.souza@auproin.com.br
+Oferta de entrada: Diagnóstico de Automação — um dia na planta, relatório técnico
+em até cinco dias úteis, escopo e valor fechados antes do início.
+
+## Serviços
+
+- [Programação de CLP, IHM e SCADA](/servicos/clp-ihm-scada/): Projeto novo, retrofit e migração de plataforma. Lógica de intertravamento, sequenciamento e diagnóstico; alarmes e telas que a operação consegue usar.
+- [Retrofit e modernização de máquina](/servicos/retrofit-modernizacao/): Comando por relés, CLP ou IHM obsoletos e máquina sem NR-12: nova arquitetura CLP + IHM com a lógica reconstruída e documentada.
+- [Projeto elétrico e de painéis](/servicos/projeto-eletrico-paineis/): Painéis de comando, distribuição e potência — bloco, unifilar e multifilar — com dimensionamento e especificação conforme NBR 5410, NBR IEC 61439 e NR-10.
+- [Comissionamento e start-up](/servicos/comissionamento-startup/): Comissionamento a frio e a quente, loop check, testes ponto a ponto, start-up assistido e apoio em parada programada.
+
+## Casos de aplicação
+
+- [Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico](/casos/retrofit-clp-ihm/): Retrofit de comando eletromecânico para arquitetura CLP + IHM em máquina de blocos de concreto Resultado em números: 196 pontos de I/O mapeados e documentados; 98 alarmes classificados por ISA-18.2; 0 → 100% da lógica sequencial documentada; 3 normas IEC 61082, 81346 e 61355 atendidas.
+- [Parada de emergência com 28 causas possíveis, identificada em segundos](/casos/primeira-causa-first-out/): Sistema de detecção de primeira causa (first-out) para eventos de emergência em conversor metalúrgico Resultado em números: 28 condições na matriz de primeira causa; 1 tela para identificar a causa da parada; SCL código parametrizado e replicável; ISA-101 interface de alta performance.
+- [Do diagrama unifilar à planta produzindo: projeto, montagem e start-up](/casos/projeto-e-comissionamento/): Projeto de automação de grande porte com centenas de pontos de I/O e comissionamento de plantas completas Resultado em números: 6 CLPs 4 IHMs e 2 sistemas SCADA; 7,5 MVA conjunto de potência integrado; 600 mil t/ano planta de laminação comissionada; 28 anos de start-ups industriais.
+- [Dados que já existiam na máquina, transformados em indicador e em menos perda](/casos/dados-e-indicadores/): Aquisição de dados de processo, painel de KPIs em tempo real e modelo preditivo de falha Resultado em números: 25% de redução no modo de falha alvo; kWh/t consumo específico em tempo real; 26 → 2 redes de Ladder viraram blocos; Nível 0 a 3 do campo ao MES.
+
+## Institucional
+
+- [Sobre e responsável técnico](/sobre/): trajetória, formação, registro CFT/CRT e habilitações NR-10, NR-12 e NR-35.
+- [Contato](/contato/): WhatsApp, telefone, e-mail e área de atendimento.
+
+## Opcional
+
+- [Parceria para integradoras e montadoras de painéis](/parceiros/): capacidade de engenharia adicional dentro do contrato do parceiro, com NDA e cláusula de não-solicitação. Página fora do menu, destinada a parceiros e não ao cliente final.
+- [Fichas de caso em PDF](/assets/pdf/): as quatro fichas e a apresentação de capacidade técnica.
+
+## Perguntas frequentes
+
+- **Quanto tempo leva um Diagnóstico de Automação?** Um dia na sua planta e relatório técnico em até cinco dias úteis. O escopo e o valor são fechados antes do início, e o relatório é seu com ou sem contratação da execução.
+- **A AUPROIN atende quais cidades?** Base em Alumínio/SP, com atendimento presencial em Mairinque, São Roque, Votorantim, Araçariguama, Iperó, Sorocaba, Itu e demais cidades da região — deslocamento em até 30 a 50 minutos. Para projeto e comissionamento há disponibilidade para viagem em todo o Estado de São Paulo.
+- **Dá para modernizar uma máquina antiga sem o programa e sem a documentação do fabricante?** Sim. O trabalho começa por levantamento em campo e engenharia reversa da lógica existente, que vira descritivo funcional aprovado antes de programar. Foi assim em máquina comandada por relés, com 196 pontos de I/O mapeados e 98 alarmes classificados por ISA-18.2.
+- **Existe responsabilidade técnica formal pelo serviço?** Sim. O responsável técnico tem registro ativo no CFT/CRT (270698738-32), com atribuição para responsabilidade técnica e emissão de TRT dentro das atribuições do técnico em eletrotécnica.
+- **Quais plataformas de CLP e SCADA são atendidas?** CLP Siemens S7-1200, S7-1500, S7-300/400, S7-200 e ET200SP (TIA Portal, STEP 7 e MicroWin) e Delta série AS. SCADA e IHM: WinCC RT Professional, AVEVA InTouch, GE iFix, IHM Siemens KTP, Weintek e Delta. Redes Profinet, Profibus-DP, Modbus TCP, AS-i e IO-Link.
+- **Como funciona a contratação?** Por escopo fechado (preço e prazo definidos por projeto), por diária de campo ou hora técnica para comissionamento e parada programada, ou por contrato mensal de retenção com horas reservadas para suporte e sustentação.

@@ -1,0 +1,295 @@
+# AUPROIN — Automação de Processos Industriais — conteúdo completo do site
+
+Razão social: Paulo José da Silva Souza Automação de Processos Industriais Ltda
+CNPJ: 63.652.491/0001-75 · Registro CFT/CRT: 270698738-32
+Responsável técnico: Paulo José da Silva Souza (Responsável Técnico e Diretor Executivo)
+Telefone e WhatsApp: (15) 98801-6442 · E-mail: paulo.souza@auproin.com.br
+Base: Alumínio/SP · Atendimento: Alumínio, Mairinque, São Roque, Votorantim, Araçariguama, Iperó, Sorocaba, Itu e região
+LinkedIn: https://www.linkedin.com/in/paulo-souza-auproin-automacao
+
+
+---
+
+## Problemas que a AUPROIN resolve
+
+- Programa de CLP sem backup, sem comentários e sem documentação — ninguém sabe o que a máquina faz.
+- Só o fabricante original consegue mexer no equipamento, e cada chamado custa caro e demora.
+- Parada crônica que se repete há meses e ninguém consegue provar a causa.
+- CLP ou IHM obsoletos, sem peça de reposição no mercado.
+- Máquina antiga sem adequação à NR-12, travando auditoria ou liberação de seguro.
+- Supervisório com centenas de alarmes que o operador aprendeu a ignorar.
+- Comando por relés e contatores, sem diagnóstico algum para a manutenção.
+- Dados de processo existem, mas não viram indicador de produção nem de consumo.
+
+
+---
+
+## Diagnóstico de Automação (oferta de entrada)
+
+Um dia na planta do cliente, relatório técnico em até cinco dias úteis, escopo e
+valor fechados antes do início. O relatório é do cliente, com ou sem contratação
+da execução. O relatório entrega:
+- Situação real do programa de CLP e do supervisório: backup, documentação e riscos.
+- Levantamento de obsolescência de hardware e software.
+- Lista priorizada das causas de parada.
+- Plano de ação com estimativa de prazo e investimento por item.
+
+
+---
+
+## Serviços
+
+### 01. Programação de CLP, IHM e SCADA
+CLP, IHM e SCADA em projeto novo, retrofit e migração de plataforma. Mapeamento e remapeamento de I/O, lógica de intertravamento, sequenciamento e diagnóstico, parametrização de inversores, configuração e diagnóstico de redes industriais.
+
+O problema:
+- Programa de CLP sem backup, sem comentários e sem documentação — ninguém sabe o que a máquina faz.
+- Só o fabricante original consegue mexer no equipamento, e cada chamado custa caro e demora.
+- Supervisório com centenas de alarmes que o operador aprendeu a ignorar.
+- Parada crônica que se repete há meses e ninguém consegue provar a causa.
+
+O método:
+- Levantamento de requisitos e descritivo funcional aprovado antes de programar.
+- Mapeamento de I/O em camadas, tabela de símbolos global e blocos parametrizados, documentados e replicáveis.
+- Sistemas de detecção de primeira causa (first-out) e telas de intertravamento para separar causa de consequência.
+- Racionalização de alarmes ISA-18.2 / IEC 62682 e telas de alta performance ISA-101.
+- Eliminação de falhas crônicas com PDCA, MASP, FMEA e Ishikawa.
+
+O que é entregue:
+- Backup do programa comentado.
+- Lista de I/O e descritivo funcional.
+- Lista formal de alarmes, classificada e priorizada.
+- Procedimentos e treinamento de operação e manutenção.
+
+Plataformas e normas: CLP Siemens S7-1200, S7-1500, S7-300/400, S7-200 e ET200SP (TIA Portal, STEP 7 Manager e MicroWin); Delta série AS (DIADesigner). Linguagens IEC 61131-3: Ladder, FBD, STL e SCL. SCADA e IHM: Siemens WinCC RT Professional; AVEVA InTouch 2020 R2; GE Digital iFix 3.5, 5.1 e 6.1; IHM Siemens KTP700 Basic, KTP900 e KTP1500 Comfort; Weintek (EasyBuilder Pro); Delta DOP-3S. Redes: Profinet, Profibus-DP, Modbus TCP, TCP/IP, AS-i e IO-Link; servidores e clientes OPC entre nível 1, 2 e MES.
+
+### 02. Retrofit e modernização de máquina
+Substituição de comando eletromecânico ou de CLP e IHM fora de linha por arquitetura CLP + IHM atual, com levantamento em campo, reconstrução documentada da lógica e adequação normativa — sem depender do fabricante original.
+
+O problema:
+- CLP ou IHM obsoletos, sem peça de reposição no mercado.
+- Comando por relés e contatores, sem diagnóstico algum para a manutenção.
+- Máquina antiga sem adequação à NR-12, travando auditoria ou liberação de seguro.
+- A lógica de operação existe apenas na cabeça de quem opera o equipamento há anos.
+
+O método:
+- Levantamento em campo e engenharia reversa da lógica existente, transformada em descritivo funcional aprovado antes de programar.
+- Migração de plataforma de CLP e IHM com mapeamento de I/O em camadas e arquitetura de override.
+- Base de alarmes classificados segundo ISA-18.2 e telas de intertravamento ISA-101.
+- Adequação NR-12 e análise da distribuição 24 Vcc com estudo de seletividade.
+- Documentação elétrica conforme IEC 61082, 81346 e 61355, coerente com a instalação real.
+
+O que é entregue:
+- Máquina com CLP e IHM atuais, com diagnóstico na tela.
+- Programa comentado, lista de I/O e descritivo funcional.
+- Documentação elétrica atualizada.
+- Treinamento de operação e manutenção.
+
+Plataformas e normas: CLP Siemens S7-1200 e S7-1500 (TIA Portal) e Delta série AS (DIADesigner); IHM Siemens KTP, Weintek e Delta DOP-3S; inversores Siemens Sinamics, WEG CFW, ABB ACS880 e Delta C2000. Normas: NR-12, ISA-18.2 / IEC 62682, ISA-101, IEC 61082 / 81346 / 61355.
+
+### 03. Projeto elétrico e de painéis
+Projeto elétrico de painéis de comando, distribuição e potência (diagrama de blocos, unifilar e multifilar), dimensionamento e especificação de dispositivos e instrumentação, e arquitetura da rede industrial entre campo, controle, supervisão e gestão.
+
+O problema:
+- Equipamento novo ou ampliação de planta sem projeto elétrico e de automação integrados.
+- Painéis sem diagrama atualizado, sem documentação coerente com a instalação real.
+- Rede industrial montada sem arquitetura, com falhas de comunicação difíceis de diagnosticar.
+
+O método:
+- Diagrama de blocos, unifilar e multifilar conforme NBR 5410, NBR IEC 61439 e NR-10.
+- Dimensionamento e especificação de dispositivos e instrumentação de campo.
+- Arquitetura e topologia da rede industrial — Profinet, Profibus-DP, Modbus TCP, AS-i e IO-Link.
+- Documentação elétrica IEC 61082, 81346 e 61355; descritivo funcional e lista de I/O.
+- Coordenação da equipe na montagem, instalação e interligação elétrica.
+
+O que é entregue:
+- Projeto elétrico completo dos painéis.
+- Lista de dispositivos e instrumentação especificada.
+- Arquitetura de rede documentada.
+- Descritivo funcional e lista de I/O.
+
+Plataformas e normas: Normas: NBR 5410, NBR IEC 61439, NR-10 e NR-12; documentação IEC 61082, 81346 e 61355. Redes: Profinet, Profibus-DP, Modbus TCP, TCP/IP, AS-i e IO-Link. Acionamentos: Siemens Sinamics G120 e S120, MasterDrives e MicroMaster, Simoreg DC-Master; WEG CFW500, CFW700 e CFW11; ABB ACS880; Delta C2000; motores CA e CC de média e alta potência.
+
+### 04. Comissionamento e start-up
+Comissionamento a frio e a quente, loop check e testes ponto a ponto, start-up assistido, apoio em parada programada e treinamento de operação e manutenção — com recebimento e validação de equipamentos de fabricantes nacionais e estrangeiros.
+
+O problema:
+- Equipamento chegando de fabricante nacional ou estrangeiro sem responsável técnico pelo controle na sua planta.
+- Parada programada com janela curta e sem equipe de automação disponível.
+- Planta nova entregue sem documentação e sem a equipe treinada para sustentar o sistema.
+
+O método:
+- Comissionamento a frio: loop check e testes ponto a ponto contra a lista de I/O.
+- Comissionamento a quente e posta em marcha com a operação.
+- Start-up assistido e apoio em parada programada.
+- Recebimento e validação de equipamentos de fabricantes nacionais e estrangeiros.
+- Treinamento de operação e manutenção antes da entrega.
+
+O que é entregue:
+- Relatório de comissionamento.
+- Backup do programa comentado e lista de I/O validada.
+- Equipe da fábrica treinada.
+- Planta em operação, documentada.
+
+Plataformas e normas: Siemens S7-1200, S7-1500, S7-300/400 e ET200SP; WinCC RT Professional, AVEVA InTouch e GE iFix; inversores Siemens, WEG, ABB e Delta; redes Profinet, Profibus-DP, Modbus TCP, AS-i e IO-Link. Diária de campo ou hora técnica para comissionamento, parada programada e suporte pontual. Habilitação: NR-10 e SEP, NR-12, NR-35, ASO e CFT/CRT vigentes.
+
+
+
+---
+
+## Casos
+
+### Ficha 01 — Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico
+Área: Retrofit e modernização de máquina
+Retrofit de comando eletromecânico para arquitetura CLP + IHM em máquina de blocos de concreto
+
+A situação: A máquina operava com o comando original de fábrica: seletor rotativo passo a passo, contatores e relés. Não havia programa, diagrama atualizado nem qualquer diagnóstico — quando a máquina parava, a manutenção descobria a causa por tentativa e erro, medindo bornes. Componentes do comando já estavam fora de linha, e a lógica de operação existia apenas na cabeça de quem operava o equipamento há anos.
+
+O que foi feito:
+- Levantamento em campo e engenharia reversa da lógica: reconstrução documentada de toda a sequência de operação a partir do comando existente, transformada em descritivo funcional aprovado antes de programar.
+- Mapeamento de 196 pontos de I/O em duas camadas, com tabela de símbolos global e POUs de leitura e escrita de I/O com arquitetura de override — o programa fica legível e a manutenção consegue forçar um ponto sem quebrar a lógica.
+- Nova arquitetura CLP + IHM com CLP Delta série AS e interface de operação, substituindo integralmente o comando eletromecânico.
+- Base mestre de 98 alarmes classificados e priorizados segundo ISA-18.2 / IEC 62682, com telas de intertravamento e interface de alta performance segundo ISA-101.
+- Análise da distribuição 24 Vcc com estudo de seletividade e adequação documental conforme IEC 61082, 81346 e 61355 — a máquina passou a ter documentação elétrica coerente com a instalação real.
+
+O resultado: A máquina saiu de zero diagnóstico para um sistema em que operador e mantenedor veem na tela exatamente qual condição impede a partida ou derrubou o ciclo. Acabou a dependência de componentes de comando obsoletos e do conhecimento não documentado, e a planta passou a ter programa comentado, lista de I/O e descritivo funcional em mãos — sem depender do fabricante original para qualquer alteração.
+
+Números: 196 — pontos de I/O mapeados e documentados · 98 — alarmes classificados por ISA-18.2 · 0 → 100% — da lógica sequencial documentada · 3 normas — IEC 61082, 81346 e 61355 atendidas
+Plataforma: CLP Delta série AS (DIADesigner) e IHM · Linguagens: Ladder e SCL · Normas: ISA-18.2 / IEC 62682, ISA-101, NR-12, IEC 61082 / 81346 / 61355 · Também aplicável em: Siemens S7-1200 e S7-1500 (TIA Portal), com migração de IHM.
+
+### Ficha 02 — Parada de emergência com 28 causas possíveis, identificada em segundos
+Área: Diagnóstico de paradas e falhas crônicas
+Sistema de detecção de primeira causa (first-out) para eventos de emergência em conversor metalúrgico
+
+A situação: O equipamento entrava em condição de emergência e o supervisório mostrava um conjunto de alarmes disparando praticamente ao mesmo tempo. Como todas as condições apareciam juntas, ninguém conseguia provar qual delas causou a parada — a discussão entre operação, manutenção e processo se repetia a cada evento, e a mesma falha voltava porque a causa real nunca era isolada.
+
+O que foi feito:
+- Matriz de 28 condições levantada com operação e manutenção, cobrindo todas as origens possíveis do evento de emergência.
+- Blocos de captura de primeira causa em SCL sobre CLP Siemens S7-1515-2 PN (TIA Portal V17): o programa congela a primeira condição que mudou de estado e a mantém registrada até o reconhecimento, separando causa de consequência.
+- Telas de diagnóstico segundo ISA-101 no supervisório, mostrando em uma única tela o evento que derrubou o processo, o horário e as condições que vieram depois.
+- Engenharia de alarmes: novas classes de alarme ISA no WinCC RT Professional, lista formal de alarmes e priorização — sem enterrar a informação útil em ruído.
+
+O resultado: O tempo entre a parada e a identificação da causa raiz caiu de uma investigação com várias pessoas para uma consulta de tela. Com a causa registrada evento a evento, passou a existir base de dados para atacar as falhas recorrentes por frequência — o mesmo método usado para eliminar definitivamente falhas crônicas de eletrônica de potência em fontes retificadoras e fontes de fornos.
+
+Números: 28 — condições na matriz de primeira causa · 1 tela — para identificar a causa da parada · SCL — código parametrizado e replicável · ISA-101 — interface de alta performance
+Plataforma: Siemens S7-1500 (TIA Portal V17), WinCC RT Professional e AVEVA InTouch · Normas: ISA-18.2 / IEC 62682 e ISA-101 · Método: PDCA, MASP, FMEA, Ishikawa, 5 Porquês e Pareto, com dados de processo em alta velocidade (IbaPDA e Iba Analyzer).
+
+### Ficha 03 — Do diagrama unifilar à planta produzindo: projeto, montagem e start-up
+Área: Projeto, montagem e comissionamento
+Projeto de automação de grande porte com centenas de pontos de I/O e comissionamento de plantas completas
+
+A situação: Implantação de plantas de processo novas — forno de indução primário, refino de metais com vaso AOD, granulação e sistemas auxiliares de refrigeração, despoeiramento e dosagem controlada de insumos. O escopo exigia um único responsável técnico da concepção ao start-up: projeto elétrico e de automação, especificação de dispositivos, coordenação da montagem em campo, comissionamento e entrega à produção.
+
+O que foi feito:
+- Projeto de automação com centenas de pontos de I/O distribuídos em 6 CLPs, 4 IHMs e 2 sistemas SCADA, incluindo descritivo funcional e lista de I/O.
+- Arquitetura e topologia da rede industrial entre as camadas de campo, controle, supervisão e gerenciamento da produção — Profinet, Profibus-DP, Modbus TCP, AS-i e IO-Link.
+- Projeto elétrico de painéis de comando, distribuição e potência (diagrama de blocos, unifilar e multifilar) conforme NBR 5410, NBR IEC 61439 e NR-10, com dimensionamento e especificação de todos os dispositivos e da instrumentação de campo.
+- Coordenação da equipe na montagem e instalação dos painéis e na interligação elétrica entre painéis, máquinas e equipamentos.
+- Comissionamento a frio e a quente, loop check, testes ponto a ponto e posta em marcha, incluindo recebimento e validação de equipamentos de fabricantes nacionais e estrangeiros.
+
+O resultado: Plantas entregues em operação, com a automação documentada e a equipe da fábrica treinada para sustentar o sistema. Integrações de porte no mesmo escopo: conjunto de potência de 7,5 MVA com retificador de 12 pulsos (4 MW) em forno a arco elétrico de corrente contínua de 40 t, e fonte de 4 MW com forno de indução de 20 t ligados aos sistemas de refrigeração e despoeiramento, com operação centralizada em supervisório.
+
+Números: 6 CLPs — 4 IHMs e 2 sistemas SCADA · 7,5 MVA — conjunto de potência integrado · 600 mil t/ano — planta de laminação comissionada · 28 anos — de start-ups industriais
+Plataforma: Siemens S7-1200, S7-1500, S7-300/400 e ET200SP; WinCC RT Professional, AVEVA InTouch e GE iFix; IHM Siemens KTP e Weintek · Acionamentos: Siemens Sinamics e MasterDrives, WEG CFW, ABB ACS880, Delta C2000 e conversores CA/CC · Normas: NBR 5410, NBR IEC 61439, NR-10 e NR-12.
+
+### Ficha 04 — Dados que já existiam na máquina, transformados em indicador e em menos perda
+Área: Dados de processo e indicadores
+Aquisição de dados de processo, painel de KPIs em tempo real e modelo preditivo de falha
+
+A situação: Os sinais de processo estavam disponíveis no CLP e nos acionamentos, mas não viravam informação de gestão: consumo de energia por tonelada, taxa de produção e estabilidade do processo eram estimados no fim do mês, e um modo de falha recorrente na linha gerava perda de material sem que houvesse sinal de aviso antes da ocorrência.
+
+O que foi feito:
+- Aquisição de dados em alta velocidade com IbaPDA e análise com Iba Analyzer; mapa de sinais definido a partir do que a operação precisa decidir, não do que é fácil coletar.
+- Plataforma de monitoramento em tempo real com coleta em nível 0/1, banco de dados, camada de KPI e aplicação web acessível pela fábrica.
+- Indicadores operacionais de consumo específico de energia (kWh/t), taxa de produção (t/h) e estabilidade do processo, disponíveis durante o turno e não depois dele.
+- Modelo preditivo (machine learning) para detecção e previsão de um modo de falha recorrente, treinado sobre o histórico de processo da própria linha.
+- Integração com a camada de gestão via servidores e clientes OPC entre nível 1, 2 e MES, sustentando a rastreabilidade do produto.
+
+O resultado: Redução de 25% na ocorrência do modo de falha alvo, com o indicador acompanhado em tempo real pela operação. Como efeito colateral do mesmo trabalho, a padronização de software substituiu 26 redes redundantes em Ladder por dois blocos funcionais parametrizados, documentados e replicáveis — menos código para manter e menos lugar para o erro se esconder.
+
+Números: 25% — de redução no modo de falha alvo · kWh/t — consumo específico em tempo real · 26 → 2 — redes de Ladder viraram blocos · Nível 0 a 3 — do campo ao MES
+Plataforma: IbaPDA e Iba Analyzer; servidores e clientes OPC; banco de dados e aplicação web; CLP Siemens S7-300/400 e S7-1500 · Entregas típicas: mapa de sinais, estrutura de KPI, painel operacional e procedimento de análise de perdas.
+
+
+
+---
+
+## Sobre o responsável técnico
+
+28 anos de experiência em implantação e suporte de projetos de automação industrial, atuando do levantamento de requisitos ao start-up e à sustentação da operação, em plantas de siderurgia, metalurgia, fundição e materiais de construção. Técnico em Eletrotécnica com registro ativo no CFT/CRT, com atribuição para responsabilidade técnica e emissão de TRT.
+
+Responsável: Paulo José da Silva Souza
+Registro: CFT/CRT 270698738-32 — ativo
+Razão social: Paulo José da Silva Souza Automação de Processos Industriais Ltda
+CNPJ: 63.652.491/0001-75
+Base: Alumínio/SP
+Atendimento: Mairinque, São Roque, Votorantim, Araçariguama, Iperó, Sorocaba, Itu e demais cidades da região
+
+Trajetória:
+- Desde 2025 — AUPROIN: Diretor executivo e responsável técnico — projetos próprios de automação, retrofit e comissionamento.
+- Metalurgia e fundição — Moxba Metalúrgica do Brasil: Araçariguama/SP — projeto, montagem e start-up de plantas de processo.
+- Siderurgia — Gerdau Aços Longos: Automação de linhas de laminação e movimentação de materiais.
+- Metalurgia do alumínio — CBA — Companhia Brasileira de Alumínio: Alumínio/SP — automação, diagnóstico e confiabilidade de processo.
+
+Formação e habilitações:
+- Engenharia de Controle e Automação — Faculdade Ampli, em andamento (conclusão prevista para 2028).
+- Técnico em Eletrotécnica — ETE Rubens de Faria e Souza, 1998. Registro ativo no CFT/CRT.
+- NR-10 e SEP, NR-12 e NR-35; ASO vigente.
+- Programação de CLP e IHM Siemens (STEP 7 e TIA Portal); inversores Sinamics, MasterDrives e Simoreg; SCADA WinCC RT, iFix e InTouch; redes Profibus-DP; robô KUKA KRC4; IbaPDA e IbaAnalyzer.
+
+
+---
+
+## Parceria com integradoras e montadoras de painéis
+
+A AUPROIN assume o escopo de controle — programação, integração e comissionamento —
+sem concorrer pelo contrato principal e sem abordagem comercial ao cliente do parceiro.
+
+Programação e integração:
+- CLP, IHM e SCADA em projeto novo, retrofit e migração de plataforma.
+- Mapeamento e remapeamento de I/O; lógica de intertravamento, sequenciamento e diagnóstico.
+- Parametrização de inversores; configuração e diagnóstico de redes industriais.
+
+Comissionamento e campo:
+- Comissionamento a frio e a quente, loop check e testes ponto a ponto.
+- Start-up assistido e apoio em parada programada.
+- Treinamento de operação e manutenção.
+
+Engenharia normativa e documentação:
+- Auditoria e revisão de programa de CLP.
+- Racionalização de alarmes ISA-18.2 / IEC 62682 e telas de alta performance ISA-101.
+- Adequação NR-12; documentação elétrica IEC 61082, 81346 e 61355; descritivo funcional e lista de I/O.
+
+Como funciona:
+- Contratação: Por escopo fechado ou por diária de campo, conforme o formato do seu contrato.
+- NDA e não-solicitação: Assinados antes do início. A AUPROIN não aborda comercialmente o cliente do parceiro, durante nem após o serviço.
+- Entrega documentada: Backup do programa comentado, lista de I/O, descritivo funcional e relatório de comissionamento — o parceiro entrega ao cliente final com a sua marca.
+- Responsabilidade formal: Registro ativo no CFT/CRT, com emissão de TRT dentro das atribuições do técnico em eletrotécnica.
+
+Disponibilidade:
+- Mobilização em 15 a 20 dias a partir do aceite, mediante programação de agenda. Dentro da janela contratada, dedicação integral ao escopo.
+- Base em Alumínio/SP. Atendimento presencial no Estado de São Paulo e disponibilidade para viagem.
+- Documentação para acesso a planta: CNPJ ativo, NR-10 e SEP, NR-35, ASO e registro CFT/CRT vigentes.
+
+
+---
+
+## Perguntas frequentes
+
+**Quanto tempo leva um Diagnóstico de Automação?**
+Um dia na sua planta e relatório técnico em até cinco dias úteis. O escopo e o valor são fechados antes do início, e o relatório é seu com ou sem contratação da execução.
+
+**A AUPROIN atende quais cidades?**
+Base em Alumínio/SP, com atendimento presencial em Mairinque, São Roque, Votorantim, Araçariguama, Iperó, Sorocaba, Itu e demais cidades da região — deslocamento em até 30 a 50 minutos. Para projeto e comissionamento há disponibilidade para viagem em todo o Estado de São Paulo.
+
+**Dá para modernizar uma máquina antiga sem o programa e sem a documentação do fabricante?**
+Sim. O trabalho começa por levantamento em campo e engenharia reversa da lógica existente, que vira descritivo funcional aprovado antes de programar. Foi assim em máquina comandada por relés, com 196 pontos de I/O mapeados e 98 alarmes classificados por ISA-18.2.
+
+**Existe responsabilidade técnica formal pelo serviço?**
+Sim. O responsável técnico tem registro ativo no CFT/CRT (270698738-32), com atribuição para responsabilidade técnica e emissão de TRT dentro das atribuições do técnico em eletrotécnica.
+
+**Quais plataformas de CLP e SCADA são atendidas?**
+CLP Siemens S7-1200, S7-1500, S7-300/400, S7-200 e ET200SP (TIA Portal, STEP 7 e MicroWin) e Delta série AS. SCADA e IHM: WinCC RT Professional, AVEVA InTouch, GE iFix, IHM Siemens KTP, Weintek e Delta. Redes Profinet, Profibus-DP, Modbus TCP, AS-i e IO-Link.
+
+**Como funciona a contratação?**
+Por escopo fechado (preço e prazo definidos por projeto), por diária de campo ou hora técnica para comissionamento e parada programada, ou por contrato mensal de retenção com horas reservadas para suporte e sustentação.

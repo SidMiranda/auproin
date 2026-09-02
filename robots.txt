@@ -1,0 +1,18 @@
+# https://www.robotstxt.org/
+User-agent: *
+Allow: /
+
+# Página de parceria: acessível por link direto, fora da busca.
+Disallow: /parceiros/
+
+# Rastreadores de IA são bem-vindos: ver /llms.txt
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap: preencha siteUrl em src/content.mjs e rode o build de novo

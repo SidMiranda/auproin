@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página não encontrada — AUPROIN — Automação de Processos Industriais</title>
+<meta name="robots" content="noindex">
+<style>
+  body { margin:0; min-height:100vh; display:grid; place-items:center; background:#fafafa; color:#1a1c22;
+         font-family: "Barlow", system-ui, sans-serif; padding:24px; text-align:center; }
+  h1 { font-size:clamp(48px,12vw,120px); margin:0; letter-spacing:.02em; color:#b8000a; line-height:1; }
+  p { font-size:17px; line-height:1.6; max-width:48ch; color:#43454b; }
+  a.btn { display:inline-block; margin-top:8px; padding:11px 18px; background:#b8000a; color:#fff;
+          text-decoration:none; border:1px solid #b8000a; font-weight:600; letter-spacing:.02em; }
+</style>
+</head>
+<body>
+<div>
+  <h1>404</h1>
+  <p>Esta página não existe ou foi movida. Se você chegou aqui por um link antigo, fale direto pelo WhatsApp.</p>
+  <p><a class="btn" id="ir-inicio" href="/">Voltar ao início</a></p>
+  <p style="font-size:14px"><a href="https://wa.me/5515988016442?text=Ol%C3%A1%20Paulo%2C%20quero%20agendar%20um%20Diagn%C3%B3stico%20de%20Automa%C3%A7%C3%A3o%20na%20minha%20planta." style="color:#8f0009">WhatsApp (15) 98801-6442</a></p>
+</div>
+<script>
+  // Em GitHub Pages de projeto o site fica em /<repo>/ — descobre a raiz certa.
+  (function () {
+    var p = location.pathname.split('/').filter(Boolean);
+    var raiz = location.hostname.endsWith('github.io') && p.length ? '/' + p[0] + '/' : '/';
+    document.getElementById('ir-inicio').setAttribute('href', raiz);
+  })();
+</script>
+</body>
+</html>
