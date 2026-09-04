@@ -15,4 +15,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# Sitemap: preencha siteUrl em src/content.mjs e rode o build de novo
+Sitemap: https://sidmiranda.github.io/auproin/sitemap.xml

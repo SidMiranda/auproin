@@ -5,7 +5,7 @@
 // ('https://auproin.com.br'). Sem isso, canonical, og:url, sitemap e llms.txt
 // saem sem URL absoluta — o que enfraquece o SEO.
 // Também pode ser passado na linha de comando: SITE_URL=... node src/build.mjs
-export const siteUrl = '';
+export const siteUrl = 'https://sidmiranda.github.io/auproin';
 
 export const empresa = {
   nome: 'AUPROIN',

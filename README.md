@@ -52,24 +52,25 @@ abordar o cliente dela. As duas mensagens não podem aparecer na mesma página.
 
 ## Publicar no GitHub Pages
 
-1. Suba o repositório para o GitHub.
-2. **Settings → Pages → Source: Deploy from a branch**, branch `main`, pasta `/ (root)`.
-3. O site sai em `https://<usuario>.github.io/<repositorio>/`.
+Repositório:  · Site: **https://sidmiranda.github.io/auproin/**
 
-O `.nojekyll` na raiz é necessário: sem ele o Jekyll do GitHub ignora arquivos e
-pastas iniciadas por `_`.
+A publicação é automática: todo push na  dispara
+, que sobe a raiz do repositório para o Pages.
+Não há etapa de build no servidor — o HTML já vai commitado.
 
-### Depois de saber a URL definitiva
+Na primeira execução o workflow tenta habilitar o Pages sozinho
+(). Se a aba **Actions** mostrar erro de permissão nessa
+etapa, habilite uma vez em **Settings → Pages → Source: GitHub Actions** e rode o
+workflow de novo (**Actions → Publicar no GitHub Pages → Run workflow**).
 
-Preencha `siteUrl` em `src/content.mjs` e rode o build de novo:
+O  na raiz é necessário: sem ele o Jekyll do GitHub ignora arquivos e
+pastas iniciadas por .
 
-```js
-export const siteUrl = 'https://usuario.github.io/auproin';
-```
+### URL do site
 
-Sem isso o site funciona, mas fica **sem** `canonical`, `og:url` e com o
-`sitemap.xml` e o `llms.txt` em caminho relativo — o que enfraquece o SEO e
-atrapalha o preview do link no WhatsApp e no LinkedIn.
+ em  já aponta para o endereço acima. É dele que saem
+, , o  e o . Se o endereço mudar
+(domínio próprio), troque ali e rode o build.
 
 ### Domínio próprio (auproin.com.br)
 

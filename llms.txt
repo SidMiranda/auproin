@@ -12,27 +12,27 @@ em até cinco dias úteis, escopo e valor fechados antes do início.
 
 ## Serviços
 
-- [Programação de CLP, IHM e SCADA](/servicos/clp-ihm-scada/): Projeto novo, retrofit e migração de plataforma. Lógica de intertravamento, sequenciamento e diagnóstico; alarmes e telas que a operação consegue usar.
-- [Retrofit e modernização de máquina](/servicos/retrofit-modernizacao/): Comando por relés, CLP ou IHM obsoletos e máquina sem NR-12: nova arquitetura CLP + IHM com a lógica reconstruída e documentada.
-- [Projeto elétrico e de painéis](/servicos/projeto-eletrico-paineis/): Painéis de comando, distribuição e potência — bloco, unifilar e multifilar — com dimensionamento e especificação conforme NBR 5410, NBR IEC 61439 e NR-10.
-- [Comissionamento e start-up](/servicos/comissionamento-startup/): Comissionamento a frio e a quente, loop check, testes ponto a ponto, start-up assistido e apoio em parada programada.
+- [Programação de CLP, IHM e SCADA](https://sidmiranda.github.io/auproin/servicos/clp-ihm-scada/): Projeto novo, retrofit e migração de plataforma. Lógica de intertravamento, sequenciamento e diagnóstico; alarmes e telas que a operação consegue usar.
+- [Retrofit e modernização de máquina](https://sidmiranda.github.io/auproin/servicos/retrofit-modernizacao/): Comando por relés, CLP ou IHM obsoletos e máquina sem NR-12: nova arquitetura CLP + IHM com a lógica reconstruída e documentada.
+- [Projeto elétrico e de painéis](https://sidmiranda.github.io/auproin/servicos/projeto-eletrico-paineis/): Painéis de comando, distribuição e potência — bloco, unifilar e multifilar — com dimensionamento e especificação conforme NBR 5410, NBR IEC 61439 e NR-10.
+- [Comissionamento e start-up](https://sidmiranda.github.io/auproin/servicos/comissionamento-startup/): Comissionamento a frio e a quente, loop check, testes ponto a ponto, start-up assistido e apoio em parada programada.
 
 ## Casos de aplicação
 
-- [Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico](/casos/retrofit-clp-ihm/): Retrofit de comando eletromecânico para arquitetura CLP + IHM em máquina de blocos de concreto. Resultado em números: 196 pontos de I/O mapeados e documentados; 98 alarmes classificados por ISA-18.2; 0 → 100% da lógica sequencial documentada; 3 normas IEC 61082, 81346 e 61355 atendidas.
-- [Parada de emergência com 28 causas possíveis, identificada em segundos](/casos/primeira-causa-first-out/): Sistema de detecção de primeira causa (first-out) para eventos de emergência em conversor metalúrgico. Resultado em números: 28 condições na matriz de primeira causa; 1 tela para identificar a causa da parada; SCL código parametrizado e replicável; ISA-101 interface de alta performance.
-- [Do diagrama unifilar à planta produzindo: projeto, montagem e start-up](/casos/projeto-e-comissionamento/): Projeto de automação de grande porte com centenas de pontos de I/O e comissionamento de plantas completas. Resultado em números: 6 CLPs 4 IHMs e 2 sistemas SCADA; 7,5 MVA conjunto de potência integrado; 600 mil t/ano planta de laminação comissionada; 28 anos de start-ups industriais.
-- [Dados que já existiam na máquina, transformados em indicador e em menos perda](/casos/dados-e-indicadores/): Aquisição de dados de processo, painel de KPIs em tempo real e modelo preditivo de falha. Resultado em números: 25% de redução no modo de falha alvo; kWh/t consumo específico em tempo real; 26 → 2 redes de Ladder viraram blocos; Nível 0 a 3 do campo ao MES.
+- [Máquina comandada por relés vira máquina com CLP, IHM e diagnóstico](https://sidmiranda.github.io/auproin/casos/retrofit-clp-ihm/): Retrofit de comando eletromecânico para arquitetura CLP + IHM em máquina de blocos de concreto. Resultado em números: 196 pontos de I/O mapeados e documentados; 98 alarmes classificados por ISA-18.2; 0 → 100% da lógica sequencial documentada; 3 normas IEC 61082, 81346 e 61355 atendidas.
+- [Parada de emergência com 28 causas possíveis, identificada em segundos](https://sidmiranda.github.io/auproin/casos/primeira-causa-first-out/): Sistema de detecção de primeira causa (first-out) para eventos de emergência em conversor metalúrgico. Resultado em números: 28 condições na matriz de primeira causa; 1 tela para identificar a causa da parada; SCL código parametrizado e replicável; ISA-101 interface de alta performance.
+- [Do diagrama unifilar à planta produzindo: projeto, montagem e start-up](https://sidmiranda.github.io/auproin/casos/projeto-e-comissionamento/): Projeto de automação de grande porte com centenas de pontos de I/O e comissionamento de plantas completas. Resultado em números: 6 CLPs 4 IHMs e 2 sistemas SCADA; 7,5 MVA conjunto de potência integrado; 600 mil t/ano planta de laminação comissionada; 28 anos de start-ups industriais.
+- [Dados que já existiam na máquina, transformados em indicador e em menos perda](https://sidmiranda.github.io/auproin/casos/dados-e-indicadores/): Aquisição de dados de processo, painel de KPIs em tempo real e modelo preditivo de falha. Resultado em números: 25% de redução no modo de falha alvo; kWh/t consumo específico em tempo real; 26 → 2 redes de Ladder viraram blocos; Nível 0 a 3 do campo ao MES.
 
 ## Institucional
 
-- [Sobre e responsável técnico](/sobre/): trajetória, formação, registro CFT/CRT e habilitações NR-10, NR-12 e NR-35.
-- [Contato](/contato/): WhatsApp, telefone, e-mail e área de atendimento.
+- [Sobre e responsável técnico](https://sidmiranda.github.io/auproin/sobre/): trajetória, formação, registro CFT/CRT e habilitações NR-10, NR-12 e NR-35.
+- [Contato](https://sidmiranda.github.io/auproin/contato/): WhatsApp, telefone, e-mail e área de atendimento.
 
 ## Opcional
 
-- [Parceria para integradoras e montadoras de painéis](/parceiros/): capacidade de engenharia adicional dentro do contrato do parceiro, com NDA e cláusula de não-solicitação. Página fora do menu, destinada a parceiros e não ao cliente final.
-- [Fichas de caso em PDF](/assets/pdf/): as quatro fichas e a apresentação de capacidade técnica.
+- [Parceria para integradoras e montadoras de painéis](https://sidmiranda.github.io/auproin/parceiros/): capacidade de engenharia adicional dentro do contrato do parceiro, com NDA e cláusula de não-solicitação. Página fora do menu, destinada a parceiros e não ao cliente final.
+- [Fichas de caso em PDF](https://sidmiranda.github.io/auproin/assets/pdf/): as quatro fichas e a apresentação de capacidade técnica.
 
 ## Perguntas frequentes
 

@@ -207,7 +207,7 @@ function blocoDiagnostico(up, { escuro = true } = {}) {
         <div class="bp">
           ${corners}
           <div class="bp-head"><span>O relatório entrega</span><span>Folha 01 de 01</span></div>
-          <div class="rows">
+          <div class="rows rows--num">
             ${diagnostico.map((t, i) => `<div><span class="k num">${String(i + 1).padStart(2, '0')}</span><span>${esc(t)}</span></div>`).join('\n            ')}
           </div>
         </div>
@@ -301,7 +301,7 @@ const faqJsonLd = {
     <div class="wrap">
       <span class="eyebrow">01 · Sua planta tem algum destes problemas?</span>
       <hr class="rule">
-      <div class="grid grid--3">
+      <div class="grid grid--4">
         ${sintomas.map((t, i) => `<div class="bp" style="padding:22px;display:flex;gap:14px;align-items:flex-start">
           ${corners}
           <span class="num" style="line-height:1.6;flex:none">${String(i + 1).padStart(2, '0')}</span>
@@ -315,7 +315,7 @@ const faqJsonLd = {
     <div class="wrap">
       <span class="eyebrow">02 · O que fazemos</span>
       <hr class="rule">
-      <div class="grid grid--3">
+      <div class="grid grid--2x2">
         ${servicos.map((s) => cardServico(up, s)).join('\n        ')}
       </div>
     </div>
@@ -356,7 +356,7 @@ const faqJsonLd = {
     <div class="wrap">
       <span class="eyebrow">06 · Referências técnicas</span>
       <hr class="rule">
-      <div class="grid grid--3">
+      <div class="grid grid--2x2">
         ${casos.map((c) => cardCaso(up, c)).join('\n        ')}
       </div>
       <p class="prose" style="margin-top:32px;max-width:72ch">Experiência construída em CBA (Alumínio/SP), Gerdau Aços Longos e Moxba Metalúrgica do Brasil (Araçariguama/SP), além dos projetos próprios da AUPROIN.</p>
@@ -386,7 +386,7 @@ const faqJsonLd = {
       <hr class="rule rule--tight">
       <h1 class="h-page">Quatro escopos, um responsável técnico</h1>
       <p class="lead">Escopo fechado, diária de campo ou contrato mensal de retenção. Entrega documentada em todos os formatos e NDA assinado quando solicitado.</p>
-      <div class="grid grid--3" style="margin-top:48px">
+      <div class="grid grid--2x2" style="margin-top:48px">
         ${servicos.map((s) => cardServico(up, s)).join('\n        ')}
       </div>
     </div>
@@ -493,7 +493,7 @@ for (const s of servicos) {
       <hr class="rule rule--tight">
       <h1 class="h-page">Quatro fichas de caso</h1>
       <p class="lead">Situação, o que foi feito e o resultado. Cada ficha tem página própria e está disponível em PDF para download, sem cadastro.</p>
-      <div class="grid grid--3" style="margin-top:48px">
+      <div class="grid grid--2x2" style="margin-top:48px">
         ${casos.map((c) => cardCaso(up, c)).join('\n        ')}
       </div>
     </div>
@@ -669,9 +669,9 @@ for (const c of casos) {
       <hr class="rule">
       <div class="grid grid--2" style="align-items:start">
         <figure class="bp">
-          <img src="${up}assets/img/painel-ihm-porta.jpg" alt="IHM Siemens e componentes de comando em painel montado pela AUPROIN" loading="lazy" width="1600" height="1200">
+          <img src="${up}assets/img/paulo-souza.jpg" alt="${esc(empresa.responsavel)}, responsável técnico da AUPROIN, em galpão industrial" width="1000" height="1250" style="aspect-ratio:4/5" fetchpriority="high">
           ${corners}
-          <figcaption>Painel de comando com IHM Siemens — projeto e montagem acompanhados em campo.</figcaption>
+          <figcaption>${esc(empresa.responsavel)} — ${esc(empresa.cargo)}.</figcaption>
         </figure>
         <div>
           <h1 class="h-page">${esc(empresa.responsavel)}</h1>
@@ -720,6 +720,7 @@ for (const c of casos) {
       email: empresa.email,
       sameAs: [empresa.linkedin],
       worksFor: { '@type': 'Organization', name: empresa.nomeCompleto },
+      ...(BASE ? { image: abs('assets/img/paulo-souza-quadrado.jpg'), url: abs('sobre/') } : {}),
     },
     prioridade: 0.8,
 });
