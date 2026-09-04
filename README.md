@@ -52,24 +52,24 @@ abordar o cliente dela. As duas mensagens não podem aparecer na mesma página.
 
 ## Publicar no GitHub Pages
 
-Repositório:  · Site: **https://sidmiranda.github.io/auproin/**
+Repositório: `SidMiranda/auproin` · Site: **https://sidmiranda.github.io/auproin/**
 
-A publicação é automática: todo push na  dispara
-, que sobe a raiz do repositório para o Pages.
+A publicação é automática: todo push na `main` dispara
+`.github/workflows/pages.yml`, que sobe a raiz do repositório para o Pages.
 Não há etapa de build no servidor — o HTML já vai commitado.
 
 Na primeira execução o workflow tenta habilitar o Pages sozinho
-(). Se a aba **Actions** mostrar erro de permissão nessa
+(`enablement: true`). Se a aba **Actions** mostrar erro de permissão nessa
 etapa, habilite uma vez em **Settings → Pages → Source: GitHub Actions** e rode o
 workflow de novo (**Actions → Publicar no GitHub Pages → Run workflow**).
 
-O  na raiz é necessário: sem ele o Jekyll do GitHub ignora arquivos e
-pastas iniciadas por .
+O `.nojekyll` na raiz é necessário: sem ele o Jekyll do GitHub ignora arquivos e
+pastas iniciadas por `_`.
 
 ### URL do site
 
- em  já aponta para o endereço acima. É dele que saem
-, , o  e o . Se o endereço mudar
+`siteUrl` em `src/content.mjs` já aponta para o endereço acima. É dele que saem
+`canonical`, `og:url`, o `sitemap.xml` e o `llms.txt`. Se o endereço mudar
 (domínio próprio), troque ali e rode o build.
 
 ### Domínio próprio (auproin.com.br)
