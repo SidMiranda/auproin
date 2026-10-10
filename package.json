@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "node src/build.mjs",
+    "test": "python -m unittest discover -s tests -v",
+    "check": "npm run build && git diff --exit-code && npm test",
     "preview": "node src/preview.mjs",
     "imagens": "node src/gerar-imagens.mjs"
   },

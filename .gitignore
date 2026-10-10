@@ -11,6 +11,10 @@ _arquivo/
 node_modules/
 npm-debug.log*
 
+# Testes Python
+__pycache__/
+*.py[cod]
+
 # Sistema
 Thumbs.db
 desktop.ini

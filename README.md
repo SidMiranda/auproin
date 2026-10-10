@@ -26,6 +26,7 @@ node src/preview.mjs    # confere em http://localhost:4321
 | `src/preview.mjs`      | Servidor local para conferir antes de publicar. |
 | `assets/css/site.css`  | Folha de estilo única, escrita à mão. |
 | `assets/img/`          | Fotos de campo, logo e imagens geradas. |
+| `assets/fonts/`        | Fontes Barlow locais e licença OFL; o site não depende do Google Fonts. |
 | `assets/pdf/`          | Fichas de caso e apresentações para download. |
 
 Trocar um texto, um número de caso ou uma pergunta do FAQ é mexer em
@@ -41,7 +42,7 @@ Trocar um texto, um número de caso ou uma pergunta do FAQ é mexer em
 | `/servicos/` + 4 páginas | Cliente final | Uma página por serviço — são estas que rankeiam em busca local. |
 | `/casos/` + 4 páginas | Cliente final | As fichas em HTML (o Google não lê PDF bem), com o PDF para download. |
 | `/sobre/` | Ambos | Responsável técnico, registro CFT/CRT, CNPJ, habilitações. |
-| `/contato/` | Ambos | WhatsApp em primeiro lugar; formulário como terceira opção. |
+| `/contato/` | Ambos | WhatsApp em primeiro lugar; telefone e e-mail diretos, sem formulário ou backend. |
 | `/parceiros/` | **Integradoras e montadoras** | Fora do menu e com `noindex`. Link passado a mão para o parceiro, para o cliente final dele não tropeçar nela. |
 
 A separação dos dois públicos é deliberada: o cliente final precisa ver um
@@ -52,11 +53,12 @@ abordar o cliente dela. As duas mensagens não podem aparecer na mesma página.
 
 ## Publicar no GitHub Pages
 
-Repositório: `SidMiranda/auproin` · Site: **https://sidmiranda.github.io/auproin/**
+Repositório oficial: `Mobspot/auproin.com.br` · Site: **https://auproin.com.br/**
 
 A publicação é automática: todo push na `main` dispara
 `.github/workflows/pages.yml`, que sobe a raiz do repositório para o Pages.
-Não há etapa de build no servidor — o HTML já vai commitado.
+Antes da publicação, a CI reconstrói o site, exige que a saída versionada esteja
+sincronizada com a fonte e executa os testes automatizados.
 
 Na primeira execução o workflow tenta habilitar o Pages sozinho
 (`enablement: true`). Se a aba **Actions** mostrar erro de permissão nessa
@@ -68,16 +70,25 @@ pastas iniciadas por `_`.
 
 ### URL do site
 
-`siteUrl` em `src/content.mjs` já aponta para o endereço acima. É dele que saem
-`canonical`, `og:url`, o `sitemap.xml` e o `llms.txt`. Se o endereço mudar
-(domínio próprio), troque ali e rode o build.
+`siteUrl` em `src/content.mjs` aponta para o domínio canônico. É dele que saem
+`canonical`, `og:url`, schema, `sitemap.xml` e os arquivos `llms`. O endereço do
+repositório não deve ser usado como URL canônica.
 
 ### Domínio próprio (auproin.com.br)
 
-Quando for apontar o domínio: crie um arquivo `CNAME` na raiz contendo só
-`auproin.com.br`, configure o DNS conforme a documentação do GitHub Pages e
-atualize o `siteUrl`. Enquanto o DNS não estiver propagado, o `CNAME` derruba o
-endereço `.github.io` — por isso ele ainda não existe aqui.
+O domínio está ativo no GitHub Pages, com `CNAME` contendo `auproin.com.br` e
+HTTPS obrigatório. Não altere DNS, MX ou esse arquivo durante mudanças editoriais.
+
+### Validação local
+
+```bash
+npm run build
+npm test
+npm run check
+```
+
+`npm run check` só termina sem diferenças quando os artefatos gerados estão
+sincronizados com a fonte.
 
 ---
 

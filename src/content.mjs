@@ -1,11 +1,13 @@
 // Conteúdo do site AUPROIN. Edite aqui e rode `node src/build.mjs`.
 
-// Endereço final do site. Preencha assim que souber a URL do GitHub Pages
-// (ex.: 'https://sidney.github.io/auproin') ou o domínio próprio
-// ('https://auproin.com.br'). Sem isso, canonical, og:url, sitemap e llms.txt
-// saem sem URL absoluta — o que enfraquece o SEO.
-// Também pode ser passado na linha de comando: SITE_URL=... node src/build.mjs
-export const siteUrl = 'https://sidmiranda.github.io/auproin';
+// Fonte canônica pública. O domínio próprio é independente do endereço do
+// repositório e deve ser usado em canonical, Open Graph, schema, sitemap e llms.
+// Em prévias locais, pode ser sobrescrito: SITE_URL=... node src/build.mjs
+export const siteUrl = 'https://auproin.com.br';
+
+// Atualize somente quando o conteúdo público mudar. Manter a data explícita
+// torna o build reproduzível e evita alterar todo o sitemap a cada execução.
+export const ultimaAtualizacao = '2026-10-10';
 
 export const empresa = {
   nome: 'AUPROIN',

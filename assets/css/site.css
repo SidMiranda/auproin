@@ -2,6 +2,42 @@
    Linguagem visual: "blueprint" — cantos vivos, hairlines, marcas de canto
    como em prancha de projeto. Acento vermelho da logo. */
 
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/barlow-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/barlow-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/barlow-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/barlow-condensed-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/barlow-condensed-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   --bg: #fafafa;
   --surface: #f0f0f1;
@@ -316,18 +352,6 @@ figure.bp figcaption { font-size: 13px; line-height: 1.5; color: var(--faint); p
   .wa-float span { display: none; }
   .wa-float { padding: 14px; border-radius: 999px; }
 }
-
-/* ---------- formulário ---------- */
-
-.field { display: flex; flex-direction: column; gap: 6px; }
-.field label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--faint); }
-.input {
-  font: inherit; font-size: 15px; padding: 10px 12px; border: 1px solid var(--divider);
-  border-radius: 0; background: var(--paper); color: var(--text); width: 100%;
-}
-.input:hover { border-color: color-mix(in srgb, var(--text) 45%, transparent); }
-.input:focus-visible { border-color: var(--accent); outline-offset: 0; }
-textarea.input { min-height: 110px; resize: vertical; }
 
 /* ---------- utilidades ---------- */
 

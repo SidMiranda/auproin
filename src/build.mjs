@@ -7,7 +7,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  siteUrl, empresa, waTextoPadrao, waTextoParceiro,
+  siteUrl, ultimaAtualizacao, empresa, waTextoPadrao, waTextoParceiro,
   sintomas, diagnostico, casos, servicos, parceiros, sobre, faq, contatoLinhas,
 } from './content.mjs';
 
@@ -96,6 +96,7 @@ ${urlPagina ? `<link rel="canonical" href="${urlPagina}">` : ''}
 <meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(descricao)}">
 <meta property="og:image" content="${urlOg}">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logotipo AUPROIN sobre painel elétrico industrial">
@@ -105,13 +106,11 @@ ${urlPagina ? `<meta property="og:url" content="${urlPagina}">` : ''}
 <meta name="twitter:title" content="${esc(titulo)}">
 <meta name="twitter:description" content="${esc(descricao)}">
 <meta name="twitter:image" content="${urlOg}">
+<meta name="twitter:image:alt" content="Logotipo AUPROIN sobre painel elétrico industrial">
 <link rel="icon" href="${up}assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="${up}assets/img/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="${up}assets/img/apple-touch-icon.png">
 <link rel="manifest" href="${up}site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;600&display=swap">
 <link rel="stylesheet" href="${up}assets/css/site.css">
 ${blocosLd}
 </head>
@@ -121,7 +120,7 @@ ${blocosLd}
 <nav class="nav">
   <a class="nav__brand" href="${href('')}"><img src="${up}assets/img/logo.png" alt="${esc(empresa.nomeCompleto)}" width="264" height="44"></a>
   ${nav}
-  <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener">Diagnóstico de Automação</a>
+  <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="navegacao">Diagnóstico de Automação</a>
 </nav>
 
 <main id="conteudo">
@@ -145,8 +144,8 @@ ${corpo}
     <div>
       <h2>Contato</h2>
       <ul>
-        <li><a href="tel:${empresa.telefoneUrl}">${esc(empresa.telefone)}</a></li>
-        <li><a href="mailto:${empresa.email}">${esc(empresa.email)}</a></li>
+        <li><a href="tel:${empresa.telefoneUrl}" data-event="contato_telefone" data-location="rodape">${esc(empresa.telefone)}</a></li>
+        <li><a href="mailto:${empresa.email}" data-event="contato_email" data-location="rodape">${esc(empresa.email)}</a></li>
         <li><a href="${empresa.linkedin}" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
@@ -158,15 +157,27 @@ ${corpo}
     </div>
   </div>
   <div class="legal">
-    <span>© ${new Date().getFullYear()} ${esc(empresa.nome)}. Todos os direitos reservados.</span>
+    <span>© ${ultimaAtualizacao.slice(0, 4)} ${esc(empresa.nome)}. Todos os direitos reservados.</span>
     <span>Atendimento em ${esc(empresa.regiao)}.</span>
   </div>
 </footer>
 
-<a class="wa-float" href="${waPadrao}" target="_blank" rel="noopener" aria-label="Agendar Diagnóstico de Automação pelo WhatsApp">
+<a class="wa-float" href="${waPadrao}" target="_blank" rel="noopener" aria-label="Agendar Diagnóstico de Automação pelo WhatsApp" data-event="contato_whatsapp" data-location="flutuante">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
   <span>Diagnóstico de Automação</span>
 </a>
+<script>
+  // Os atributos data-event preparam a medição sem acoplar o site a um provedor.
+  // Quando o GA4 for ativado, o gtag já receberá os cliques de conversão.
+  document.addEventListener('click', function (evento) {
+    var alvo = evento.target.closest('[data-event]');
+    if (!alvo || typeof window.gtag !== 'function') return;
+    window.gtag('event', alvo.dataset.event, {
+      event_category: 'contato',
+      event_label: alvo.dataset.location || 'site'
+    });
+  });
+</script>
 </body>
 </html>
 `;
@@ -202,7 +213,7 @@ function blocoDiagnostico(up, { escuro = true } = {}) {
         <div>
           <h2 class="h-page" style="max-width:16ch">Comece por um Diagnóstico de Automação</h2>
           <p class="lead">Um dia na sua planta, relatório técnico em até cinco dias úteis, escopo e valor fechados antes do início. O relatório é seu, com ou sem contratação da execução.</p>
-          <div class="btns"><a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener">Agendar pelo WhatsApp</a></div>
+          <div class="btns"><a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="diagnostico">Agendar pelo WhatsApp</a></div>
         </div>
         <div class="bp">
           ${corners}
@@ -244,6 +255,7 @@ function cardCaso(up, c) {
 const negocioJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  ...(BASE ? { '@id': `${BASE}/#empresa` } : {}),
   name: empresa.nomeCompleto,
   legalName: empresa.razaoSocial,
   description: 'Engenharia de automação industrial: programação de CLP, IHM e SCADA, retrofit de máquina, projeto elétrico de painéis e comissionamento.',
@@ -289,7 +301,7 @@ const faqJsonLd = {
         <h1 class="h-hero">Automação industrial com engenharia própria,<br><span class="accent">a 30 minutos da sua planta</span></h1>
         <p class="lead">CLP, IHM e SCADA — projeto novo, retrofit, diagnóstico de falhas e adequação normativa para indústrias de ${esc(empresa.regiao)}. 28 anos de experiência em plantas de grande porte, com responsabilidade técnica formal (registro ativo no CFT/CRT e emissão de TRT). Base em ${esc(empresa.cidade)}: atendimento no mesmo dia, sem custo de deslocamento de capital.</p>
         <div class="btns">
-          <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener">Agendar Diagnóstico de Automação</a>
+          <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="home_hero">Agendar Diagnóstico de Automação</a>
           <a class="btn btn-secondary" href="servicos/">Ver serviços</a>
         </div>
       </div>
@@ -453,7 +465,7 @@ for (const s of servicos) {
           <p class="prose">${esc(s.caso.subtitulo)}</p>
           <div class="btns">
             <a class="btn btn-secondary" href="${up}casos/${s.caso.slug}/">Ler a ficha completa</a>
-            <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener">Agendar Diagnóstico</a>
+            <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="servico">Agendar Diagnóstico</a>
           </div>
         </div>
       </div>
@@ -472,7 +484,8 @@ for (const s of servicos) {
       name: s.titulo,
       description: s.metaDescricao,
       serviceType: s.titulo,
-      provider: { '@type': 'ProfessionalService', name: empresa.nomeCompleto, telephone: empresa.telefoneUrl },
+      provider: { '@type': 'ProfessionalService', ...(BASE ? { '@id': `${BASE}/#empresa` } : {}), name: empresa.nomeCompleto, telephone: empresa.telefoneUrl },
+      ...(BASE ? { url: abs(`${rota}/`) } : {}),
       areaServed: { '@type': 'AdministrativeArea', name: 'Sorocaba e região, São Paulo, Brasil' },
     },
     trilha: [{ nome: 'Início', rota: '' }, { nome: 'Serviços', rota: 'servicos' }, { nome: s.titulo, rota }],
@@ -555,7 +568,7 @@ for (const c of casos) {
       <div class="btns">
         <a class="btn btn-secondary" href="${up}${c.pdf}" download>Baixar ficha em PDF</a>
         ${relacionado ? `<a class="btn btn-secondary" href="${up}servicos/${relacionado.slug}/">Serviço: ${esc(relacionado.tituloCurto)}</a>` : ''}
-        <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener">Agendar Diagnóstico</a>
+        <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="caso">Agendar Diagnóstico</a>
       </div>
       <p class="prose" style="margin-top:16px">${esc(c.gancho)}</p>
     </div>
@@ -575,6 +588,8 @@ for (const c of casos) {
       author: { '@type': 'Person', name: empresa.responsavel },
       publisher: { '@type': 'Organization', name: empresa.nomeCompleto },
       inLanguage: 'pt-BR',
+      dateModified: ultimaAtualizacao,
+      ...(BASE ? { mainEntityOfPage: abs(`${rota}/`), image: abs(c.foto) } : {}),
     },
     trilha: [{ nome: 'Início', rota: '' }, { nome: 'Casos', rota: 'casos' }, { nome: c.titulo, rota }],
     prioridade: 0.8,
@@ -595,7 +610,7 @@ for (const c of casos) {
       <h1 class="h-page">Capacidade de engenharia adicional dentro do seu contrato</h1>
       <p class="lead">A AUPROIN assume o escopo de controle — programação, integração e comissionamento — sem concorrer pelo contrato principal e sem abordagem comercial ao seu cliente. Responsável técnico com 28 anos de experiência em plantas de siderurgia, metalurgia e fundição, atuando do projeto ao start-up.</p>
       <div class="btns">
-        <a class="btn btn-primary" href="${waParceiro}" target="_blank" rel="noopener">Falar sobre uma parceria</a>
+        <a class="btn btn-primary" href="${waParceiro}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="parceiros">Falar sobre uma parceria</a>
         <a class="btn btn-secondary" href="${up}assets/pdf/AUPROIN_Apresentacao_Capacidade_Tecnica.pdf" download>Baixar apresentação em PDF</a>
       </div>
     </div>
@@ -699,7 +714,7 @@ for (const c of casos) {
 
           <div class="btns">
             <a class="btn btn-secondary" href="${empresa.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener">Agendar Diagnóstico de Automação</a>
+            <a class="btn btn-primary" href="${waPadrao}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="sobre">Agendar Diagnóstico de Automação</a>
           </div>
         </div>
       </div>
@@ -740,7 +755,7 @@ for (const c of casos) {
       <h1 class="h-page">Fale direto com o responsável técnico</h1>
       <div class="grid grid--2" style="margin-top:48px;align-items:start">
         <div class="stack">
-          <a class="bp" href="${waPadrao}" target="_blank" rel="noopener" style="padding:24px;text-decoration:none;display:flex;gap:16px;align-items:center;background:var(--accent);border-color:var(--accent);color:#fff">
+          <a class="bp" href="${waPadrao}" target="_blank" rel="noopener" data-event="contato_whatsapp" data-location="contato" style="padding:24px;text-decoration:none;display:flex;gap:16px;align-items:center;background:var(--accent);border-color:var(--accent);color:#fff">
             ${corners}
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
             <span>
@@ -757,38 +772,21 @@ for (const c of casos) {
           <p class="small" style="max-width:52ch">Atendimento presencial em ${esc(empresa.regiao)} — deslocamento em até 30 a 50 minutos.</p>
         </div>
 
-        <form id="form-contato" style="display:flex;flex-direction:column;gap:16px">
-          <span class="eyebrow" style="margin:0">Ou deixe uma mensagem</span>
+        <div class="bp card" style="gap:20px">
+          ${corners}
+          <span class="eyebrow" style="margin:0">Prefere e-mail?</span>
           <hr class="rule" style="margin:0">
-          <div class="field"><label for="f-nome">Nome</label><input class="input" id="f-nome" name="nome" type="text" required></div>
-          <div class="field"><label for="f-empresa">Empresa e cidade</label><input class="input" id="f-empresa" name="empresa" type="text"></div>
-          <div class="field"><label for="f-retorno">Telefone ou e-mail</label><input class="input" id="f-retorno" name="retorno" type="text" required></div>
-          <div class="field"><label for="f-msg">O que está acontecendo na planta</label><textarea class="input" id="f-msg" name="msg" rows="4"></textarea></div>
-          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-            <button class="btn btn-primary" type="submit">Enviar por e-mail</button>
-            <span class="small">Abre o seu programa de e-mail com a mensagem preenchida.</span>
+          <h2 class="h-card">Conte o que está acontecendo na planta</h2>
+          <p class="prose mt-0">Envie a cidade, o equipamento envolvido e o principal sintoma. A mensagem vai direto para o responsável técnico.</p>
+          <div class="btns" style="margin-top:0">
+            <a class="btn btn-primary" href="mailto:${empresa.email}?subject=${encodeURIComponent('Diagnóstico de automação — contato pelo site')}" data-event="contato_email" data-location="contato">Escrever e-mail</a>
+            <a class="btn btn-secondary" href="tel:${empresa.telefoneUrl}" data-event="contato_telefone" data-location="contato">Ligar agora</a>
           </div>
-        </form>
+          <span class="small">E-mail: ${esc(empresa.email)}</span>
+        </div>
       </div>
     </div>
-  </section>
-
-  <script>
-  document.getElementById('form-contato').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var d = new FormData(e.target);
-    var corpo = [
-      'Nome: ' + (d.get('nome') || ''),
-      'Empresa e cidade: ' + (d.get('empresa') || ''),
-      'Contato: ' + (d.get('retorno') || ''),
-      '',
-      d.get('msg') || ''
-    ].join('\\n');
-    window.location.href = 'mailto:${empresa.email}'
-      + '?subject=' + encodeURIComponent('Contato pelo site — ' + (d.get('nome') || ''))
-      + '&body=' + encodeURIComponent(corpo);
-  });
-  </script>`;
+  </section>`;
 
   pagina({
     rota: 'contato',
@@ -854,27 +852,32 @@ writeFileSync(join(RAIZ, 'robots.txt'), [
   '# Página de parceria: acessível por link direto, fora da busca.',
   'Disallow: /parceiros/',
   '',
-  '# Rastreadores de IA são bem-vindos: ver /llms.txt',
+  '# Descoberta em busca e assistentes é permitida; treinamento não é autorizado por padrão.',
+  'User-agent: OAI-SearchBot',
+  'Allow: /',
+  '',
   'User-agent: GPTBot',
-  'Allow: /',
+  'Disallow: /',
+  '',
   'User-agent: ClaudeBot',
-  'Allow: /',
+  'Disallow: /',
+  '',
   'User-agent: PerplexityBot',
   'Allow: /',
+  '',
   'User-agent: Google-Extended',
-  'Allow: /',
+  'Disallow: /',
   '',
   BASE ? `Sitemap: ${BASE}/sitemap.xml` : '# Sitemap: preencha siteUrl em src/content.mjs e rode o build de novo',
   '',
 ].join('\n'), 'utf8');
 
-const hoje = new Date().toISOString().slice(0, 10);
 writeFileSync(join(RAIZ, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${paginas.map((p) => `  <url>
     <loc>${BASE}/${p.rota ? p.rota + '/' : ''}</loc>
-    <lastmod>${hoje}</lastmod>
+    <lastmod>${ultimaAtualizacao}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${p.prioridade.toFixed(1)}</priority>
   </url>`).join('\n')}
